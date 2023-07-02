@@ -98,3 +98,12 @@ print(response)
 # Does the response use the retrieved info correctly - good to check if the model is hallucinating
 # Above would increase latency and cost of your system - not really used in prod - only use
 # if error rate needs to be extremely small
+
+
+# BEST PRACTICES FOR EVALUATING THE OUTPUT OF A LLM - Gradually building up a set of test examples
+# Tune prompts on handful of examples
+# Add additional "tricky" examples opportunistically
+# Develop metrics to measure performance on examples
+# Collect randomly sampled set of examples to tune to dev set/ hold-out CV set
+# Collect and use a hold-out test set
+# Can stop anywhere in the process if you decide your system is working well enough
